@@ -1,0 +1,22 @@
+{
+  "name": "studio-scheduler",
+  "version": "1.0.0",
+  "description": "Calendar app for Production Studio at WDRB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deetriplett/studio-scheduler.git"
+  },
+  "author": "Dawn Monroe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deetriplett/studio-scheduler/issues"
+  },
+  "homepage": "https://github.com/deetriplett/studio-scheduler#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
