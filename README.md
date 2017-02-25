@@ -1,2 +1,2 @@
-# studio-scheduler
-Calendar App for Production Studio at WDRB 
+# guest-list 
+Planning with ease by planning easy. Guest List Guru keeps your guests in 'check'.  
