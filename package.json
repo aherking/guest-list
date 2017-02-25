@@ -15,8 +15,11 @@
   "bugs": {
     "url": "https://github.com/deetriplett/guest-list/issues"
   },
-  "homepage": "https://github.com/deetriplett/quest-list#readme",
+  "homepage": "https://github.com/deetriplett/guest-list#readme",
   "dependencies": {
     "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }
