@@ -1,21 +1,21 @@
 {
-  "name": "studio-scheduler",
+  "name": "guest-list",
   "version": "1.0.0",
-  "description": "Calendar app for Production Studio at WDRB",
+  "description": "The Ultimate Guest List for your Event!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deetriplett/studio-scheduler.git"
+    "url": "git+https://github.com/deetriplett/guest-list.git"
   },
   "author": "Dawn Monroe",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/deetriplett/studio-scheduler/issues"
+    "url": "https://github.com/deetriplett/guest-list/issues"
   },
-  "homepage": "https://github.com/deetriplett/studio-scheduler#readme",
+  "homepage": "https://github.com/deetriplett/quest-list#readme",
   "dependencies": {
     "express": "^4.14.1"
   }
