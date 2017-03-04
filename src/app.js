@@ -4,14 +4,16 @@
 // ***** MODULES *****
 const express     = require('express');
 const app         = express();
+const config      = require('./config');
+const router      = require('./routes');
 const bodyParser  = require('body-parser');
 const path        = require('path');
 const mongoose    = require('mongoose');
-//const methodOverride = require('method-override');
+
 
 // ***** CONFIGURATION *****
 // config files
-//const db = require('./config/db');
+//const db = require('./src/config/db');
 
 //Route for root of server using Location '/', request and response
 app.get('/', function(req, res){
