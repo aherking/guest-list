@@ -9,7 +9,7 @@
 <body ng-app="guruGuestList"><!--tell angular where to bootstrap our guest list at-->
 
 <!--This is the Guest List directive-->
-<guest-list></guest-list>
+<div guest-list></div>
 
 <div class="item" ng-class="{'editing-item': editing, 'edited': guest.edited, 'completed': guest.completed}" ng-repeat="guest in guest-list | orderBy: 'completedRSVP' " ng-init="guest.completed = false">
   <!--change for rsvp input (check for rsvp === true) || (check for +1/+2 , add to running total) or add a category button   <input type="checkbox" ng-model="guest.completed" /> -->
