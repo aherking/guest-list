@@ -3,12 +3,20 @@
 
 // ***** MODULES *****
 const express     = require('express');
-const app         = express();
 const config      = require('./config');
 const router      = require('./routes');
 const bodyParser  = require('body-parser');
 const path        = require('path');
-const mongoose    = require('mongoose');
+//const mongoose    = require('mongoose');
+
+const app         = express();
+app.use(bodyParser.json());//parse application json
+app.use(bodyParser.urlencoded({ extended: true }));// parse application/x-www-form-urlencoded
+app.use(router);
+//Set Port Server 3000 or 8080
+app.listen(8080, function(){
+  console.log("Frontend Server is running on port 8080!");
+});
 
 
 // ***** CONFIGURATION *****
@@ -16,26 +24,20 @@ const mongoose    = require('mongoose');
 //const db = require('./src/config/db');
 
 //Route for root of server using Location '/', request and response
-app.get('/', function(req, res){
-  res.send("<h1>Guest List</h1>");
-});
+// app.get('/', function(req, res){
+//   res.send("<h1>Guest List</h1>");
+// });
 
-//Set Port Server 3000 or 8080
-app.listen(8080, function(){
-  console.log("Frontend Server is running on port 8080!");
-});
+
 
 // connect to Mongodb  ---- mongoose.connect(db.url);
-mongoose.connect(`mongodb://${config.db.host}/${config.db.dbname}`);
+//mongoose.connect(`mongodb://${config.db.host}/${config.db.dbname}`);
 
 //get all data(guests) of the body (POST) parameter
 
 // **** Parse *****
 
-//parse application json
-app.use(bodyParser.json());
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+
 
 //parse application/ vnd.api as json
 //app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
