@@ -24,7 +24,7 @@ router.get('/tester', function(req, res, next) {
 
 
 router.get('/files', function(req, res, next) {
-  res.json(files);
+  setTimeout(function(){res.json(files)},1000);
 });
 
 router.post('/files', function(req, res, next) {
