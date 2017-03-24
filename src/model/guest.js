@@ -1,9 +1,6 @@
 //Model for mongoose(mongo db)
 'use strict';
 const mongoose = require('mongoose');
-//Clear out Mongoose data and empty out all existing models & schemas
-mongoose.models = {};
-mongoose.modelSchemas = {};
 //guest.name
 //guest.rsvpd
 
@@ -17,3 +14,5 @@ const guestSchema = new mongoose.Schema({
 const model = mongoose.model('Guest', guestSchema);
 
 module.exports = model;
+
+
