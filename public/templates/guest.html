@@ -1,0 +1,10 @@
+<div class="item" ng-class="{'editing-item': editing, 'edited': guest.edited, 'rsvpd': guest.rsvpd}" ng-repeat="guest in guests | orderBy: 'rsvpd' " ng-init="guest.rsvpd = false">
+  <input type="checkbox" ng-model="guest.rsvpd" />
+  <span ng-click="guest.rsvpd = !guest.rsvpd; guest.edited = true"></span>
+  <label ng-hide="editing" ng-click="editing=true">{{guest.name}}</label>
+  <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="guest.name" ng-change="guest.edited = true"/>
+  <div class="actions">
+    <a href="" ng-click="saveGuests()">Save</a>
+    <a href="" class="delete" ng-click="deleteGuest(guest, $index)">Delete</a>
+  </div>
+</div>
