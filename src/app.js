@@ -1,55 +1,21 @@
-// ***** Main File for Application ***** //
-'use strict'; //Throws error, for testing
+//Entry Point for Guest List App
+'use strict'
 
-// ***** MODULES *****
-const express     = require('express');
-const config      = require('./config');
-const router      = require('./routes');
-const bodyParser  = require('body-parser');
-const path        = require('path');
-//const mongoose    = require('mongoose');
+const express = require('express');
+const router = require('./api'); //Require API Module (mounted to router)
 
-const app         = express();
-app.use(bodyParser.json());//parse application json
-app.use(bodyParser.urlencoded({ extended: true }));// parse application/x-www-form-urlencoded
-app.use(router);
-//Set Port Server 3000 or 8080
-app.listen(8080, function(){
-  console.log("Frontend Server is running on port 8080!");
+const app = express();
+//Connect database to app
+require('./database');
+//Connect seed data
+require('./seed');
+
+//Serving entire Public folder (the Face of the App) at root url
+app.use('/', express.static('public'));
+
+//API Name Space added to router, so it'll be automatically prefixed
+app.use('/api', router);
+
+app.listen(8080, function() {
+  console.log("Bears. Beets. Battlestar Galaxtica...and server is running on port 8080!");
 });
-
-
-// ***** CONFIGURATION *****
-// config files
-//const db = require('./src/config/db');
-
-//Route for root of server using Location '/', request and response
-// app.get('/', function(req, res){
-//   res.send("<h1>Guest List</h1>");
-// });
-
-
-
-// connect to Mongodb  ---- mongoose.connect(db.url);
-//mongoose.connect(`mongodb://${config.db.host}/${config.db.dbname}`);
-
-//get all data(guests) of the body (POST) parameter
-
-// **** Parse *****
-
-
-
-//parse application/ vnd.api as json
-//app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
-
-// override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
-//app.use(methodOverride('X-HTTP-Method-Override'));
-
-// set the static files location
-app.use(express.static(path.join(__dirname, '../public')));
-app.use('/node_modules',express.static(path.join(__dirname, '../node_modules')));
-
-
-
-// expose app
-exports = module.exports = app;
