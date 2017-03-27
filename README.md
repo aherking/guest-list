@@ -1,40 +1,27 @@
-# guest-list 
-Planning with ease by planning easy. Guest List Guru keeps your guests in 'check'.  
-This is the Ultimate Guest List App for all your party planning needs!
+# guest-list
+Planning with ease by planning easy. The Wedding Guest List Guru keeps your guests in 'check'.  
+This is the Ultimate Wedding Guest List App for all your wedding planning needs!
 
-Architecture Tree of App:
+Simple set up: 
 
-PROJECT
-  |MOCK
-    -guests.json (Mock data used when first creating app)
-  |PUBLIC
-    -scripts
-      --controllers
-        --- main.js
-        --- guest.js
-      --directives
-        --- guest.js
-      --services
-        --- data.js
-      --app.js
-    -styles
-      --- main.css
-      --- checkbox-empty.svg
-      --- checkbox-filled.svg
-    -templates
-      --- guest.html
-    -vendor
-      --- angular.js (Angular Library)
-    -index.html
-    -readme.md  
-  |SRC
-    -api
-      -- index.js
-    -models
-      -- guest.js
-    -app.js
-    -database.js
-  |PACKAGE.JSON
-  |node_modules
-  |.gitignore
+-Using the console of your choice ( I like bash!) clone the app using:
+  git clone https://github.com/deetriplett/guest-list
+  
+-Then 'cd' into the root directory: guest-list
+  cd guest-list
+  
+-Install packages and dependencies you'll need to run the app
+  npm install 
 
+-Start up Mongodb (with windows you must navigate to Mongodb's bin folder and open up the mongod console)
+
+-Use node to start up the app. While in the guest-list directory, in your console, type:
+  node index.js
+  
+  If successful, the console log will read :
+   Bears. Beets. Battlestar Galactica...and server is running on port 8080!
+   Success! Connected to Mongodb!
+
+-Open your preferred browser and go to localhost:8080
+
+-Begin planning your dream wedding!
