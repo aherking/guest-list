@@ -1,10 +1,14 @@
 body {
   color: #2d3339;
-  font-family: "Varela Round";
+  font-family: "Fira Sans Condensed", sans-serif;
   text-align: center;
-  background-image: url("http://res.cloudinary.com/deetriplett/image/upload/v1489359229/starrybg_idxxl6.jpg");
-  /*background: #edeff0;*/
-  font-size: 16px; }
+  background: #edeff0;
+  font-size: 16px;
+  background-image: url("http://res.cloudinary.com/deetriplett/image/upload/b_rgb:fff,e_make_transparent:10,o_60,q_100/v1490481454/weddingbkgd_po9rqj.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  }
 
 a {
   color: #3f8abf;
@@ -12,13 +16,23 @@ a {
   a:hover {
     color: #65a1cc; }
 
+#header {
+  font-family: 'Clicker Script', cursive;
+  background-color: #eeebf5;
+  border-style: none;
+  font-size: 3em;
+  margin-bottom: -1.75empx;
+}
 .list {
   background: #fff;
-  width: 80%;
-  min-width: 500px;
-  margin: 80px auto 0;
-  border-top: 40px solid #5a6772;
-  text-align: left; }
+  height: 100%;
+  width: 50%;
+  margin: auto 0;
+  margin-left: 25%;
+  border-top: 40px solid #fff;
+  text-align: left;
+  border-style: solid;
+  border-color: #328bab; }
   .list .item {
     border-bottom: 2px solid #edeff0;
     padding: 17px 0 18px 17px; }
@@ -27,7 +41,7 @@ a {
       cursor: pointer; }
     .list .item .editing-label {
       margin-left: 5px;
-      font-family: "Varela Round";
+      font-family: "Fira Sans Condensed", sans-serif;
       border-radius: 2px;
       border: 2px solid #a7b9c4;
       font-size: 16px;
@@ -44,14 +58,13 @@ a {
     .list .item.editing-item .actions {
       margin-top: 17px; }
   .list .edited label:after {
-    content: " edited";
+    content: " RSVP'd";
     text-transform: uppercase;
     color: #a7b9c4;
     font-size: 14px;
     padding-left: 5px; }
   .list .rsvpd label {
-    color: #a7b9c4;
-    text-decoration: line-through; }
+    color: #a7b9c4; }
   .list .add {
     padding: 25px 0 27px 25px; }
 
@@ -69,4 +82,63 @@ input[type="checkbox"] + span {
 }
 input[type="checkbox"]:checked + span {
     background:url(checkbox-filled.svg) left top no-repeat;
+}
+
+#main-page h1 {
+    font-size: 5em;
+    font-style: italic;
+    color: #a6a6a8;
+    background-color: #ffdefd;
+    border-radius: .25em;
+    margin: 2%;
+    padding: auto;
+}
+
+#main-page {
+    color: #fff7ff;
+    height: 50%;
+    width: 100%;
+    margin-top: 25%;
+    background: rgba(76, 175, 80, .2);
+    border-style: solid;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: .5em;
+    border-bottom-width: .5em;
+    border-color: #eef0b4;
+}
+
+
+/******* Media Queries for Responsive Design******/
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) and (orientation: portrait) {
+
+}
+@media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+}
+
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+
+}
+@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+
+}
+@media (min-width: 992px) and (max-width: 1200px) and (orientation: portrait) {
+
+}
+@media (min-width: 992px) and (max-width: 1200px) and (orientation: landscape) {
+
+}
+@media (min-width: 1200px) and (max-width: 1500px) and (orientation: portrait) {
+
+}
+@media (min-width: 1200px) and (max-width: 1500px) and (orientation: landscape) {
+
 }
