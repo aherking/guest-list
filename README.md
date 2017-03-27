@@ -5,20 +5,20 @@ This is the Ultimate Wedding Guest List App for all your wedding planning needs!
 Simple set up: 
 
 -Using the console of your choice ( I like bash!) clone the app using:
-  git clone https://github.com/deetriplett/guest-list
+  -git clone https://github.com/deetriplett/guest-list
   
 -Then 'cd' into the root directory: guest-list
-  cd guest-list
+  -cd guest-list
   
 -Install packages and dependencies you'll need to run the app
-  npm install 
+  -npm install 
 
 -Start up Mongodb (with windows you must navigate to Mongodb's bin folder and open up the mongod console)
 
 -Use node to start up the app. While in the guest-list directory, in your console, type:
-  node index.js
+  -node index.js
   
-  If successful, the console log will read :
+  -If successful, the console log will read :
    Bears. Beets. Battlestar Galactica...and server is running on port 8080!
    Success! Connected to Mongodb!
 
