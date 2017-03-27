@@ -1,7 +1,7 @@
-{
+g{
   "name": "guest-list",
   "version": "1.0.0",
-  "description": "The Ultimate Guest List for your Event!",
+  "description": "The Ultimate Guest List for your Wedding!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
