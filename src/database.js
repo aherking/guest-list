@@ -1,4 +1,4 @@
-//Application Coonection to database
+//Application Connection to database
 
 'use strict';
 
