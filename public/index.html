@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
   <title></title>
-  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Fira+Sans+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css" type="text/css">
 </head>
-<!-- App Loaded aka Bootstrapped with ng-app directive "listApp" -->
-<body ng-app="listApp">
-  <div class="header">
-      <!-- <img src ="http://res.cloudinary.com/deetriplett/image/upload/v1489359229/starwars_yftcnj.png" alt="Star Wars" id="head-img"> -->
-    </div>
-  <h1>Guest List</h1>
+<body ng-app="guestListApp">
+
+<!-- <main id="main-page">
+  <a href="#" ng-click="show = !show">Create Guest List</h1>
+</main> -->
+
+<section ng-app="showApp" ng-controller="mainPageController" ng-show="show">
+  <h1>The Guest List</h1>
 
   <div class="list" ng-controller="mainCtrl">
     <div class="add">
       <a href="#" ng-click="addGuest()">
-        + Add a New Guest</a>
+        + Add a Guest</a>
       </div>
-      <!-- insert guest.html -->
     <guest></guest>
    </div>
+</section>
 
-     <script src="/vendor/angular.js"></script>
-     <script src="/scripts/app.js"></script>
-     <script src="/scripts/controllers/main.js"></script>
-     <script src="/scripts/controllers/guest.js"></script>
-     <script src="/scripts/services/data.js"></script>
-     <script src="/scripts/directives/guest.js"></script>
-   </body>
-   </html>
- </body>
- </html>
+  <script src="/vendor/angular.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/controllers/main.js"></script>
+  <script src="/scripts/controllers/guest.js"></script>
+  <script src="/scripts/services/data.js"></script>
+  <script src="/scripts/directives/guest.js"></script>
+</body>
+</html>
