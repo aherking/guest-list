@@ -3,7 +3,7 @@
 'use strict';
 
 //Import Guest Model
-const Guest = require('./models/guest.js');
+const Guest = require('../models/guest.js');
 
 let guests =
 [
