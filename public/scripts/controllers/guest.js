@@ -1,16 +1,15 @@
 'use strict';
-const angular = require('angular');
+
 //guestCtrl that deletes and saves
-
-angular.module('guestListApp')
-.controller('guestCtrl', function($scope, dataService) {
+function GuestCtrl ($scope, dataService) {
   $scope.deleteGuest = function(guest, index) {
+  dataService.deleteGuest(guest).then(function() {
     $scope.guests.splice(index, 1);
-    dataService.deleteGuest(guest);
-  };
-
+  });
+};
+//saveGuest ctrl
   $scope.saveGuests = function() {
-    var filteredGuests = $scope.guests.filter(function(guest){
+    let filteredGuests = $scope.guests.filter(function(guest){
       if(guest.edited) {
         return guest
       };
@@ -23,6 +22,7 @@ angular.module('guestListApp')
     $scope.guests.forEach(function(guest) {
       guest.edited = false;
     });
-  };
+  }
+}
 
-});
+module.exports = GuestCtrl;
