@@ -1,22 +1,24 @@
-//Application Connection to database
+//Application Coonection to database
 
 'use strict';
 
 const mongoose = require('mongoose');
+const config = require('./config');
 
-mongoose.connect('mongodb://localhost:27017/guestlist');
+
+mongoose.connect(`${config.db.host}/${config.db.dbName}`);
 
 const db = mongoose.connection;
 
 //Error handling with db
 db.on("error", function(err){
-  console.log('Failed connecting to Mongodb!');
+  console.log('Failed! No connection to Mongodb!');
 });
 //DB handling with NO ERRORS
 db.once("open", function(){
   console.log('Success! Connected to Mongodb!');
   //All db communication goes here
-  const Guest = mongoose.model('Guest', guestSchema);
+
   db.close();
 });
 
