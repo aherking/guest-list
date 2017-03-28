@@ -10,11 +10,12 @@ const guestSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
-  }
-  // rsvpd: Boolean
+  },
+  rsvpd: Boolean
 });
 
 //Guest model method
-const Guest = mongoose.model('Guest', guestSchema);
+const guest = mongoose.model('Guest', guestSchema);
+
 
 module.exports = guest;
