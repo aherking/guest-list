@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title></title>
+  <title>Wedding Guest List</title>
   <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Fira+Sans+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css" type="text/css">
 </head>
 <body ng-app="guestListApp">
@@ -11,19 +12,20 @@
   <a href="#" ng-click="show = !show">Create Guest List</h1>
 </main> -->
 
-<section ng-app="showApp" ng-controller="mainPageController" ng-show="show">
-  <h1>The Guest List</h1>
+<section>
+  <h1 ng-click="editing-true">The Guest List</h1>
 
   <div class="list" ng-controller="mainCtrl">
     <div class="add">
       <a href="#" ng-click="addGuest()">
         + Add a Guest</a>
       </div>
+      <!-- Insert guest.html -->
     <guest></guest>
    </div>
 </section>
 
-  <script src="/vendor/angular.js"></script>
+
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/main.js"></script>
   <script src="/scripts/controllers/guest.js"></script>
