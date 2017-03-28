@@ -1,9 +1,8 @@
 //Seed data for database
-
 'use strict';
 
 //Import Guest Model
-const Guest = require('../models/guest.js');
+const Guest = require('./models/guest');
 
 let guests =
 [
@@ -15,14 +14,6 @@ let guests =
     "rsvpd" : true},
   {"name" : "Curtis Nickels",
     "rsvpd" : false},
-  {"name" : "Jack Jackson",
-    "rsvpd" : true},
-  {"name": "Rebecca Pawel",
-    "rsvpd" : true},
-  {"name": "Francine Featherbottom",
-    "rsvpd" : false},
-  {"name": "Pepper Ann",
-    "rsvpd" : true},
   {"name": "Curtis Nickels",
     "rsvpd" : true},
   {"name": "Jimmy Dohickey",
