@@ -3,7 +3,8 @@
 //Express Server
 const express = require('express');
 const Guest = require('../models/guest');
-//API Routes
+//const guests = require('../../mock/guests.json');
+
 const router = express.Router();
 
 //GET method to get guests url
@@ -19,34 +20,16 @@ router.get('/guests', function(req, res) {
   });
 });
 
-//Post ROUTE method to create new guest
-// router.post('/guests', function (req, res) {
-//   let guest = new Guest(req.body); //data for guest, need body parser for responses
-//   guest.save(function(err, guest){
-//     if(err) return next(err);
-//     res.status(201);
-//     res.json(guest);
-//   });
-  ////////////////////////////////////
+//Post ROUTE method to create new guest, store in database
   router.post('/guests', function(req, res) {
     let guest = req.body;
     Guest.create(guest, function(err, guest) {
       if(err){
         return res.status(500).json("Halt! Error!");
       }
-      res.json({'name': guest, message: "Guest Added!"});
+      res.json({'guest': guest, message: "Guest created!"});
     });
   });
-
-  //create a Guest/Store in db
-//   Guest.create(guest, function(err, guest) { //1st param. err, 2nd param new guest
-//     if (err) {
-//       return res.status(500).json({err: err.message});
-//     }
-//     //Send response
-//     res.json({name: guest, message: 'Guest added!'});
-//   });
-// });
 
 //Put ROute to update existing entries
 router.put('/guests/:id', function (req, res) {//id param
