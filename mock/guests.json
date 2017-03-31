@@ -1,24 +1,10 @@
 [
-  {"name" : "Franny Fingerbottom",
-    "rsvp" : true},
-  {"name" : "Josh Jamboree",
-    "rsvp" : true},
-  {"name" : "Yuk Yakenmore",
-    "rsvp" : true},
-  {"name" : "Curtis Nickels",
-    "rsvp" : false},
-  {"name" : "Jack Jackson",
-    "rsvp" : true},
-  {"name": "Rebecca Pawel",
-    "rsvp" : true},
-  {"name": "Francine Featherbottom",
-    "rsvp" : false},
-  {"name": "Pepper Ann",
-    "rsvp" : true},
-  {"name": "Curtis Nickels",
-    "rsvp" : true},
-  {"name": "Jimmy Dohickey",
-    "rsvp" : false},
-  {"name": "Ralph Alot",
-    "rsvp" : true}
-]
+  {"name" : "Bride's Parents",
+    "rsvpd" : false},
+  {"name" : "Groom's Parents",
+    "rsvpd" : false},
+  {"name" : "Brother/Sister",
+    "rsvpd" : false},
+  {"name" : "Best Friend",
+    "rsvpd" : false}
+];
