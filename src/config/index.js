@@ -1,11 +1,11 @@
 // SRC-> CONFIG -> INDEX.JS
 
 const config = {
-  appName: 'GuestList',
+  appName: 'GuestListApp',
   port: 8080,
   db: {
     host:'localhost',
-    dbName: 'guestList'
+    dbName: 'guestlist'
   }
 }
 
