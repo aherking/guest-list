@@ -1,6 +1,6 @@
 # guest-list
-Planning with ease by planning easy. The Wedding Guest List Guru keeps your guests in 'check'.  
-This is the Ultimate Wedding Guest List App for all your wedding planning needs!
+Planning with ease by planning easy. The Guest List Guru keeps your guests in 'check'.  
+This is the Ultimate Guest List App for all your planning needs!
 
 Simple set up: 
 
@@ -24,4 +24,4 @@ Simple set up:
 
 -Open your preferred browser and go to localhost:8080
 
--Begin planning your dream wedding!
+-Begin planning your dream event!
