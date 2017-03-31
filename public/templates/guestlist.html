@@ -1,0 +1,22 @@
+
+<!--Guest List-->
+<div ng-controller="mainCtrl" class="list">
+  <div class="add">
+  <button ng-click="addGuest()">+ Add Guest +</button>
+  </div>
+  <div ng-repeat="guest in guests | orderBy: 'rsvpd' : false" ng-class="{'editing-item': editing, 'rsvpd': guest.rsvpd}" class="item">
+
+  <input ng-model="guest.rsvpd" type="checkbox"/>
+     <span ng-click="guest.rsvpd = !guest.rsvpd"></span>
+  <label ng-hide="editing" class="editing-label">{{guest.name}}</label>
+  <input ng-show="editing" ng-model="guest.name" ng-blur="editing = false;" class="editing-label" type="text"/>
+
+<div class="actions">
+
+  <a href="" ng-click="deleteGuest(guest, $index)" class="delete">DELETE</a>
+</div>
+    </div>
+  <br>
+  <a href="" ng-click="saveGuests(guest)" id="">SAVE LIST</a>
+
+</div>
