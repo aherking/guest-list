@@ -6,25 +6,37 @@
   <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css" type="text/css">
 </head>
+
 <body ng-app="guestListApp">
 
-<!-- <main id="main-page">
-  <a href="#" ng-click="show = !show">Create Guest List</h1>
-</main> -->
+  <div ng-controller="mainCtrl" class="title">
+  <!--Personalize Header-->
+    <h1>Wedding Guest List</h1>
+    <label ng-click="editing = true" ng-hide="editing" class="editing-label">Custom{{title.name}}</label>
+    <input ng-blur= "editing = false" ng-show="editing" ng-model="title.name" class="editing-label"  type="text"/>
+    <br>
+    </div>
 
-<section>
-  <h1 ng-click="editing-true">The Guest List</h1>
-
-  <div class="list" ng-controller="mainCtrl">
+  <!--Guest List-->
+  <div ng-controller="mainCtrl" class="list">
     <div class="add">
-      <a href="#" ng-click="addGuest()">
-        + Add a Guest</a>
-      </div>
-      <!-- Insert guest.html -->
-    <guest></guest>
-   </div>
-</section>
+    <button ng-click="addGuest()">+ Add Guest +</button>
+    </div>
+    <div ng-repeat="guest in guests | orderBy: 'rsvpd' : false" ng-class="{'editing-item': editing, 'rsvpd': guest.rsvpd}" class="item">
 
+    <input ng-model="guest.rsvpd" type="checkbox"/>
+       <span ng-click="guest.rsvpd = !guest.rsvpd; guest.edited = true"></span>
+    <label ng-click="editing = true" ng-hide="editing" class="editing-label">{{guest.name}}</label>
+    <input ng-show="editing" ng-model="guest.name" ng-blur="editing = false;" class="editing-label" type="text"/>
+
+  <div class="actions">
+    <a href="" ng-click="deleteGuest(guest, $index)" class="delete">DELETE</a>
+  </div>
+      </div>
+    <br>
+    <a href="" ng-click="saveGuests(guest)" id="">SAVE LIST</a>
+
+  </div>
 
   <script src="/scripts/app.js"></script>
   <script src="/scripts/controllers/main.js"></script>
