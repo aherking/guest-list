@@ -24,4 +24,4 @@ guests.forEach(function(guest, index) {
       guest.create({rsvpd: false, name: guest}); //rsvp: false
     };
   });
-})
+});
