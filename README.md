@@ -7,7 +7,7 @@ Simple set up:
 -Using the console of your choice ( I like bash!) clone the app using:
   -git clone https://github.com/deetriplett/guest-list
   
--Then 'cd' into the root directory: guest-list
+-Then 'cd' into the root directory:
   -cd guest-list
   
 -Install packages and dependencies you'll need to run the app
@@ -19,8 +19,8 @@ Simple set up:
   -node index.js
   
   -If successful, the console log will read :
-   Bears. Beets. Battlestar Galactica...and server is running on port 8080!
-   Success! Connected to Mongodb!
+   Bears. Beets. Battlestar Galactica. We hear ya on port 8080!
+   Nice. Your Mongodb connection is looking good!
 
 -Open your preferred browser and go to localhost:8080
 
