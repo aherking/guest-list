@@ -6,7 +6,7 @@ return {
   templateURL: 'templates/guestlist.html',
   controller:'mainCtrl',
   replace: true
-}
+};
 
 });
 
