@@ -1,33 +1,27 @@
-//Seed data for database
+//Seed data for database, to get app started
 'use strict';
 
 //Import Guest Model
-const Guest = require('./models/guest');
+const Guest = require('./models/guest.js');
 
 let guests =
 [
-  {"name" : "Franny Fingerbottom",
-    "rsvpd" : true},
-  {"name" : "Josh Jamboree",
-    "rsvpd" : true},
-  {"name" : "Yuk Yakenmore",
-    "rsvpd" : true},
-  {"name" : "Curtis Nickels",
+  {"name" : "Bride's Parents",
     "rsvpd" : false},
-  {"name": "Curtis Nickels",
-    "rsvpd" : true},
-  {"name": "Jimmy Dohickey",
+  {"name" : "Groom's Parents",
     "rsvpd" : false},
-  {"name": "Ralph Alot",
-    "rsvpd" : true}
+  {"name" : "Brother/Sister",
+    "rsvpd" : false},
+  {"name" : "Best Friend",
+    "rsvpd" : false}
 ];
 //iterate through array
 guests.forEach(function(guest, index) {
   //Look for guest with where name = string
-  Guest.find({'name': guest}, function(err, guests) {
+  Guest.find({'name': guest}, function(error, guests) {
     //no err & no guests, then create
-    if(!err && !guests.length) {
+    if(!error && !guests.length) {
       guest.create({rsvpd: false, name: guest}); //rsvp: false
-    }
+    };
   });
-});
+})
