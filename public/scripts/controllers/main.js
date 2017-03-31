@@ -1,17 +1,16 @@
 'use strict';
 
-//mainCtrl
-function MainCtrl ($scope, dataService) {
-// gets guests and attaches list to scope.guests variable
-  dataService.getGuests(function(response){
-    let guests = response.data.guests;
-    $scope.guests =  guests;
-    });
-// Create new guest and adds it to guest list using unshift
+angular.module('guestListApp')
+.controller('mainCtrl', function($scope, dataService) {
+  //ADD new guest data
   $scope.addGuest = function() {
-    $scope.guests.unshift({name: "Who would you like to invite?",
-                      rsvpd: false});
+    let guest = {name: "New Guest", rsvpd: false};
+    $scope.guests.unshift(guest);
   };
-}
-
-module.exports = MainCtrl;
+//GET guest data and attaches it to list
+dataService.getGuests(function(response) {
+  console.log(response.data);
+  let guests = response.data.guests;
+  $scope.guests =  guests;
+});
+});
