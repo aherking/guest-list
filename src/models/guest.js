@@ -15,7 +15,7 @@ const guestSchema = new mongoose.Schema({
 });
 
 //Guest model method
-const guest = mongoose.model('Guest', guestSchema);
+const model = mongoose.model('Guest', guestSchema);
 
 
-module.exports = guest;
+module.exports = model;
